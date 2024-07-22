@@ -1,0 +1,14 @@
+server:
+  port: 8082
+
+spring:
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    template:
+      default-topic: dev-topic
+    bootstrap-servers: localhost:9092
+  zipkin:
+    sender:
+      type: kafka
